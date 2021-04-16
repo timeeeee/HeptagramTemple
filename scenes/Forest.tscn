@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/Forest.gd" type="Script" id=1]
+[ext_resource path="res://sprites/forest_base.png" type="Texture" id=2]
+[ext_resource path="res://sprites/forest_outline.png" type="Texture" id=3]
+[ext_resource path="res://scenes/Tree.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 128.497, 69.8852 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 42.7186, 100.226 )
+
+[node name="Forest" type="Node2D"]
+script = ExtResource( 1 )
+tree_scene = ExtResource( 4 )
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+
+[node name="Outline" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="SpawnArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnArea"]
+position = Vector2( 33.3374, 37.0831 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="SpawnArea"]
+position = Vector2( -138.219, 10.8627 )
+shape = SubResource( 2 )
+
+[node name="YSortTrees" type="YSort" parent="."]
+
+[node name="MouseOverArea" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MouseOverArea"]
+polygon = PoolVector2Array( -191.092, -111.895, 171.356, -15.1477, 173.244, 132.097, -203.362, 132.569 )
+[connection signal="input_event" from="MouseOverArea" to="." method="_on_MouseOverArea_input_event"]
+[connection signal="mouse_entered" from="MouseOverArea" to="." method="_on_MouseOverArea_mouse_entered"]
+[connection signal="mouse_exited" from="MouseOverArea" to="." method="_on_MouseOverArea_mouse_exited"]

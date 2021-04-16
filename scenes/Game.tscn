@@ -1,3 +1,31 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sprites/mountain.png" type="Texture" id=1]
+[ext_resource path="res://scripts/ConversationPlayer.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Forest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Temple.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Camp.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Workshop.tscn" type="PackedScene" id=6]
 
 [node name="Game" type="Node2D"]
+
+[node name="Mountains" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="ConversationPlayer" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Forest" parent="." instance=ExtResource( 3 )]
+position = Vector2( 182, 488 )
+starting_trees = 80
+
+[node name="Workshop" parent="Forest" instance=ExtResource( 6 )]
+position = Vector2( 262.502, -7.54172 )
+
+[node name="Temple" parent="." instance=ExtResource( 4 )]
+position = Vector2( 821.171, 496.478 )
+
+[node name="Camp" parent="." instance=ExtResource( 5 )]
+position = Vector2( 477.6, 554.998 )
