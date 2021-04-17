@@ -1,0 +1,80 @@
+[
+    [
+	"You’re beginning to regret taking the job, after all. It seemed like an easy enough gig. The client requested cheap materials and arrived with a simple blueprint: some kind of temple in the shape of a seven-pointed star. He was a man of the cloth—said the temple was important for an upcoming religious event.",
+	"But since you arrived on the jobsite, the vibes have been all wrong. The client (priest? You realize you’re not sure of his faith, much less his title) is as incompetent as he is overbearing. He keeps suggesting changes that would compromise the structural integrity of the entire project, and you’ve already gotten complaints from your crew that he’s micromanaging them. You’ve worked with picky clients before, but this guy is on another level.",
+	"Plus, the sound he makes when clears his throat is…weirdly wet. It can’t be healthy. Is he dying? Should he see a doctor? Would it be inappropriate for you to recommend a doctor to your client? You’re pondering this very question as your first workday draws to a close. From the corner of your eye, you spot the client approaching you.",
+	"The client approaches you with hands clasped together in apparent excitement. “A fair start to a magnificent structure, I think!” he says. You mask an involuntary grimace with a cough and respond:",
+	[
+	    "Yeah, uh, it’s coming along.",
+	    "I’m glad you’re happy with the progress.",
+	    "What’s this place for, anyway?"
+	],
+	"The man’s eyes widen. “But,” he begins, “Surely you know of the great beast who presides over the seventh plane? It is said to have seven arms and seven heads and to wield untold power on the lower planes.” You meet this bizarre testimonial with a blank stare, but your client appears unphased. “The temple honors the beast.” And with that, he walks off.",
+	"Great, you think as the man plods away. He’s incompetent and insane."
+    ],
+    [
+	"You’re a consummate professional. You make a point to keep clients informed, regardless of your personal feelings about them or their projects. So, at the end of your second workday, you set aside your distaste for the weird priest (?) and his gross wet cough and brief him about your progress.",
+	"You find him in one of the jobsite’s temporary buildings, poring over a leather-bound book. You update him on the construction status. Everything is going smoothly, you report.",
+	"“Wonderful!” He’s way too enthusiastic. It’s weird. “Followers of the beast will be most pleased.” You are a professional. You are a professional. You are not going to Lose It in a routine client interaction on day two of a simple project. You reply:",
+	[
+	    "…Yep.",
+	    "That’s great! I think.",
+	    "Doesn’t it have a name besides ‘the beast’?"
+	],
+	"“We are devoted to the beast, but we do not call it by its name,” says the man. “Names are very powerful.” You are a consummate professional, so you say nothing."
+    ],
+    [
+	"It’s a relief when the third day on the temple job draws to a close. Even accounting for the clients’ eccentricities and the project’s quirks, you haven’t been sleeping well. Weird dreams. It must show on your face, because when you meet with your client for a daily debrief, he gives you a look of concern and asks if you’re alright.",
+	"“Just tired,” you say. “The jobs all blend together.” The man gives you a look you suspect is meant to be comforting, but has rather the opposite effect.",
+	"“My friend, be overjoyed! You work in service of the beast! You do a great thing for this plane and for every other!” In a more just world, you are awarded a medal for the herculean effort you’ve just expended on not rolling your eyes. You say:",
+	[
+	    "I’ll try.",
+	    "I’m not really religious.",
+	    "What’s so great about the beast?"
+	],
+	"“The beast rewards loyalty, but no one is unaffected by its influence.” You smile at the man and add another tally to your mental list of red flags."
+    ],
+    [
+	"You like the quarry, you think, as the sun sets on your fourth workday. You’ve always liked quarries. Something about the way the rocks catch the light…the oddly straight lines of excavation…well, you’re a contractor, not a poet. The disturbing sound of wet cough pulls you away from these thoughts.",
+	"The guy (calling him “the client,” even in your mind, now feels altogether too charitable) is standing behind you clutching a yellowing notepad in one hand and a small silver pendant in the other.",
+	"“Might I trouble you with a question?” he asks. You hate him. You hate how he talks like one of those guys at the Renaissance Fair who’s way too into it. You say “of course!” with a big lying smile.",
+	"“Your timeline—will you tell me if it changes? Rather, it mustn’t change. It is of utmost importance that the temple is completed on the seventh day.”",
+	[
+	    "I’m good for my word. The project will be done on time.",
+	    "No accounting for weather.",
+	    "Why the seventh day?"
+	],
+	"“You see,” the guy says, an edge of urgency in his voice, “It is the seventh day of the seventh month. A sacred day for followers.” You shrug and nod and turn your eyes back towards the quarry, which feels distinctly less peaceful now."
+    ],
+    [
+	"The job is getting to you. You’d spent the previous evening scouring forums and search engines for mentions of seventh-planar beasts and their cults. The heptagram, you’d learned, is used by some Christian and Jewish mystics (and, more worryingly, by fans of the metal band Tool), but nowhere had you seen anything that resembled your client’s account. What is this guy’s deal?",
+	"You force these concerns from your mind as you prepare for your daily debrief. You’re here to get paid. In two days, the project will be done, your invoice will be fulfilled, and your thoughts will be blissfully empty of the phrase “seventh-planar beast.” You find the priest (??) in a half-finished hallway and deliver a rote project update. He beams at you. On someone else, it would look ominous. Instead, it kind of looks like he’s going to try to sell you a used car.",
+	"“The seventh day draws near,” he says. You don’t want to know what he means. You don’t care. You want to go home. It’s entirely against your better judgment that you ask:",
+	["What, exactly, happens on the seventh day?"],
+	"“On the seventh day, the seven planes align. It is then that the beast can move between planes.” You don’t like the sound of that. If the guy were more competent, you might even be worried."
+    ],
+    [
+	"You have one day left on this project. It is this thought alone that carries you through the workday in a dissociative haze. The weather has held, your crew have worked hard, and tomorrow, you will all go home for a well-deserved break. You are not unraveling. You are not unraveling!! That would be silly. Everything is fine.",
+	"As you pack up your things to go, a sinking feeling in your gut tells you The Weird Guy is behind you. The horrible sound of a wet cough confirms your instinct. You never referred him to a doctor, but at this point you kind of hope whatever’s wrong just kills him. You expect him to prompt you for project updates, but instead, when you turn to face him, he says “Have you been in your line of work long?”",
+	"“Contracting?” You frown as you try to remember. “Yeah, I have. I started in construction, but I’d say it’s been over a decade now.” The man nods.",
+	"“You enjoy your trade, then?” God, he cannot make anything sound even remotely normal. Is this what it’s like to have a friendly conversation with this dude? Because it feels like your soul is leaving your body. You say:",
+	["Honestly? No. I wanted to be a game designer. I like that type of problem solving.",
+	 "Oh yes, I’ve always wanted to be a contractor. I like this type of problem solving.",
+	 "I guess I’ve never really thought about it."
+	],
+	"The man clears his throat (you don’t like that), smiles another used car salesman smile (you don’t like that either), and says “All things change. Soon, all things will be made new.” You like that least of all."
+    ],
+    [
+	"You finish early on the last day. The sun is still out when you round up your crew and tell them, with a meaningful look, to go home and enjoy the weekend. The temple is complete, and you find the priest (??????) in the austere central chamber. He’s lit seven large candles and, you note with some concern, drawn a weird symbol on the ground in white chalk.",
+	"You’re just here to hand him the last invoice, but before you can stop yourself, you say “What’s this for?” Startled, he fumbles with his chalk and drops it. What is the opposite of ‘animal magnetisim?’ you wonder vaguely.",
+	"After retrieving the chalk, the man turns to you and says, “The planes are aligned. Today, we summon the beast.” For the first time, you notice other cultists (?) milling about the edges of the room. Your wretched client continues: “At our command, the beast of the seventh plane will arrive to cleanse the earth. Today we are ending the world as you know it.”",
+	"You are floating above yourself and watching these words fall on your own helpless, stupid ears. You open your mouth and say:",
+	[
+	    "Wait, you’re doing what?",
+	    "What??",
+	    "WHAT????"
+	],
+	"“No one is unaffected by the beast.” He punctuates this comment with a sickly cough (ew) and turns back toward the center of the chamber. He’s waving the silver pendant you’ve seen him carrying; you see now that it, too, is a seven-pointed star. Around you, other cultists have begun to chant. Shit. You should have been a game designer.",
+	"Something weird is happening with the light—the candles’ flames are unchanged, but their shadows warp and distend on the wood-paneled walls as the chanting grows louder. The entire structure shudders and groans, and somewhere, some part of you is relieved that your company’s warranty does not cover destruction related to demon summoning. A jagged tear splits open the—the wall? No, it’s the air itself, rent asunder by what you realize are seven clawed, inhuman hands. The room goes dark. The rushing wind is a shriek. The last thing you remember thinking as the hot, metallic stench overtakes your senses is “I can’t believe it actually worked.”"
+    ]
+]
