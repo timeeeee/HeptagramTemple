@@ -16,6 +16,7 @@ script = ExtResource( 1 )
 tree_scene = ExtResource( 4 )
 
 [node name="Background" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.247059 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 2 )
 

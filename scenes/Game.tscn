@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://sprites/mountain.png" type="Texture" id=1]
 [ext_resource path="res://scripts/ConversationPlayer.gd" type="Script" id=2]
@@ -6,26 +6,161 @@
 [ext_resource path="res://scenes/Temple.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Camp.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Workshop.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/Game.gd" type="Script" id=7]
+[ext_resource path="res://scripts/GUI.gd" type="Script" id=8]
+[ext_resource path="res://scenes/Worker.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Quarry.tscn" type="PackedScene" id=10]
+[ext_resource path="res://fonts/Merriweather.tres" type="DynamicFont" id=11]
+[ext_resource path="res://audio/schriftsonar_-_Sonar17-Profit_Rede_1.ogg" type="AudioStream" id=12]
+[ext_resource path="res://audio/schriftsonar_-_Sonar20-Aether.ogg" type="AudioStream" id=13]
+[ext_resource path="res://audio/white_noise.ogg" type="AudioStream" id=14]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node"]
+script = ExtResource( 7 )
+num_workers = 20
+temple = NodePath("Temple")
+forest = NodePath("Forest")
+quarry = NodePath("Quarry")
+camp = NodePath("Camp")
+workshop = NodePath("Workshop")
+worker_scene = ExtResource( 9 )
 
 [node name="Mountains" type="Sprite" parent="."]
 scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
 centered = false
 
-[node name="ConversationPlayer" type="Node2D" parent="."]
-script = ExtResource( 2 )
-
 [node name="Forest" parent="." instance=ExtResource( 3 )]
 position = Vector2( 182, 488 )
 starting_trees = 80
 
-[node name="Workshop" parent="Forest" instance=ExtResource( 6 )]
-position = Vector2( 262.502, -7.54172 )
-
 [node name="Temple" parent="." instance=ExtResource( 4 )]
 position = Vector2( 821.171, 496.478 )
 
+[node name="GUI" type="Control" parent="."]
+anchor_right = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MessageLabel" type="Label" parent="GUI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -531.0
+margin_bottom = 75.0
+custom_fonts/font = ExtResource( 11 )
+text = "dummy message"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MessageFadeoutTween" type="Tween" parent="GUI"]
+
+[node name="ResourcesHBox" type="HBoxContainer" parent="GUI"]
+margin_left = 20.0
+margin_right = 340.0
+margin_bottom = 75.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StoneLabel" type="Label" parent="GUI/ResourcesHBox"]
+margin_top = 27.0
+margin_right = 93.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 11 )
+text = "Stone: 0"
+valign = 1
+
+[node name="WoodLabel" type="Label" parent="GUI/ResourcesHBox"]
+margin_left = 113.0
+margin_top = 27.0
+margin_right = 206.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 11 )
+text = "Wood: 0"
+valign = 1
+
+[node name="WorkersLabel" type="Label" parent="GUI/ResourcesHBox"]
+margin_left = 226.0
+margin_top = 27.0
+margin_right = 320.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 11 )
+text = "Workers: 0"
+valign = 1
+
+[node name="Workshop" parent="." instance=ExtResource( 6 )]
+position = Vector2( 444.502, 480.458 )
+
+[node name="Quarry" parent="." instance=ExtResource( 10 )]
+position = Vector2( 266.599, 304.978 )
+
 [node name="Camp" parent="." instance=ExtResource( 5 )]
 position = Vector2( 477.6, 554.998 )
+
+[node name="BackgroundAudio" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 12 )
+autoplay = true
+
+[node name="ChaosAudio" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 13 )
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ConversationPlayer" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ConversationPlayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.858824 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConversationVBox" type="VBoxContainer" parent="CanvasLayer/ConversationPlayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -400.0
+margin_top = 500.0
+margin_right = 400.0
+custom_constants/separation = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogueFadeInTween" type="Tween" parent="CanvasLayer/ConversationPlayer"]
+
+[node name="ConversationScrollTween" type="Tween" parent="CanvasLayer/ConversationPlayer"]
+
+[node name="WorldOverRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 1083.0
+margin_bottom = 670.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WhiteNoise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+[connection signal="cut_tree" from="Forest" to="." method="_on_Forest_cut_tree"]
+[connection signal="build_temple" from="Temple" to="." method="_on_Temple_build_temple"]
+[connection signal="temple_complete" from="Temple" to="." method="_on_Temple_temple_complete"]
+[connection signal="cut_stone" from="Quarry" to="." method="_on_Quarry_cut_stone"]

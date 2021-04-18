@@ -1,6 +1,5 @@
 extends Node2D
 
-
 func _ready():
 	# we see the tree not the log
 	$Standing.visible = true

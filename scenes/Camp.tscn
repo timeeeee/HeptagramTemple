@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sprites/camp_footprint.png" type="Texture" id=1]
 [ext_resource path="res://sprites/fire.png" type="Texture" id=2]
@@ -21,6 +21,9 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6 ]
 }
 
+[sub_resource type="CircleShape2D" id=2]
+radius = 27.4065
+
 [node name="Camp" type="Node2D"]
 script = ExtResource( 3 )
 
@@ -36,3 +39,9 @@ hframes = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Burn = SubResource( 1 )
+
+[node name="RestArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RestArea"]
+position = Vector2( -2.51985, 0.157486 )
+shape = SubResource( 2 )

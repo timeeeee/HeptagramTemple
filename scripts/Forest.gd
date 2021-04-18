@@ -1,5 +1,6 @@
 extends Node2D
 
+class_name Forest
 
 signal cut_tree
 
@@ -64,3 +65,7 @@ func _on_MouseOverArea_mouse_exited():
 func _on_MouseOverArea_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		emit_signal("cut_tree")
+
+
+func are_trees_left():
+	return (trees.size() > 0)

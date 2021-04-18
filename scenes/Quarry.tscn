@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/Quarry.gd" type="Script" id=1]
+[ext_resource path="res://sprites/quarry_stages.png" type="Texture" id=2]
+[ext_resource path="res://sprites/quarry_outline.png" type="Texture" id=3]
+[ext_resource path="res://scenes/RoughBlock.tscn" type="PackedScene" id=4]
+
+[node name="Quarry" type="Node2D"]
+script = ExtResource( 1 )
+rough_block_scene = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+hframes = 25
+
+[node name="Outline" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+
+[node name="TopleftPoint" type="Node2D" parent="."]
+position = Vector2( -79.9895, -42.9082 )
+
+[node name="BottomrightPoint" type="Node2D" parent="."]
+position = Vector2( 93.2328, 68.3354 )
+
+[node name="MouseoverArea" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MouseoverArea"]
+polygon = PoolVector2Array( -78.1276, 84.0592, -131.101, -76.9792, -5.55441, -99.2279, 125.289, -26.1249, 123.17, 85.6484, 20.4024, 100.481 )
+[connection signal="input_event" from="MouseoverArea" to="." method="_on_MouseoverArea_input_event"]
+[connection signal="mouse_entered" from="MouseoverArea" to="." method="_on_MouseoverArea_mouse_entered"]
+[connection signal="mouse_exited" from="MouseoverArea" to="." method="_on_MouseoverArea_mouse_exited"]

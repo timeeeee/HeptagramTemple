@@ -8,9 +8,50 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Camp",
+"language": "GDScript",
+"path": "res://scripts/Camp.gd"
+}, {
+"base": "Control",
+"class": "ConversationPlayer",
+"language": "GDScript",
+"path": "res://scripts/ConversationPlayer.gd"
+}, {
+"base": "Node2D",
+"class": "CutBlock",
+"language": "GDScript",
+"path": "res://scripts/CutBlock.gd"
+}, {
+"base": "Node2D",
+"class": "Forest",
+"language": "GDScript",
+"path": "res://scripts/Forest.gd"
+}, {
+"base": "Node2D",
+"class": "RoughBlock",
+"language": "GDScript",
+"path": "res://scripts/RoughBlock.gd"
+}, {
+"base": "Node2D",
+"class": "Temple",
+"language": "GDScript",
+"path": "res://scripts/Temple.gd"
+}, {
+"base": "Node2D",
+"class": "Worker",
+"language": "GDScript",
+"path": "res://scripts/Worker.gd"
+} ]
 _global_script_class_icons={
-
+"Camp": "",
+"ConversationPlayer": "",
+"CutBlock": "",
+"Forest": "",
+"RoughBlock": "",
+"Temple": "",
+"Worker": ""
 }
 
 [application]

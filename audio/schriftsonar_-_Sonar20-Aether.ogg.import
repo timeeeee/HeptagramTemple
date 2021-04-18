@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/schriftsonar_-_Sonar20-Aether.ogg-8619c69266e63fc71ac40169a9df435c.oggstr"
+
+[deps]
+
+source_file="res://audio/schriftsonar_-_Sonar20-Aether.ogg"
+dest_files=[ "res://.import/schriftsonar_-_Sonar20-Aether.ogg-8619c69266e63fc71ac40169a9df435c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
